@@ -18,14 +18,10 @@ unsigned replace_byte(unsigned x, int i, unsigned char b) {
 	return x;
 }
 int main(){
-	int x = -1;
-	unsigned y = (unsigned)x;
-	show_int(x);
-	show_int(sra(x, 2));
-	show_unsigned(y);
-	show_unsigned(srl(y, 2));
+	unsigned x = 0;
+	unsigned y = (unsigned)-1;
 
-	printf("%d\t%d\n", sra(x,2),x>>2);
-	printf("%u\t%u\n", srl(y,2),y>>2);
+	printf("%d\n", any_add_one(x));
+	printf("%d\n", any_add_one(y));
 	return 0;
 }

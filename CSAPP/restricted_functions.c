@@ -35,4 +35,9 @@ int sra(int x, int k) {
 	return (int)(xsrl | mask);
 }
 
+int any_add_one(unsigned x) {
+	unsigned odd_mask = 0x99999999;
+	return !~((x & odd_mask)| ~odd_mask);
+}
+
 

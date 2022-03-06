@@ -12,3 +12,7 @@ int int_shifts_are_arithmetic();
 //2.63
 unsigned srl(unsigned x, int k);
 int sra(int x, int k);
+
+//2.64
+// Return 1 when any odd bit of x equals 1;0 otherwise. Assume w=32.
+int any_add_one(unsigned x);
