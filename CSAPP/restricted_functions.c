@@ -40,4 +40,9 @@ int any_add_one(unsigned x) {
 	return !~((x & odd_mask)| ~odd_mask);
 }
 
+int odd_ones(unsigned x) {
+	unsigned odd_mask = 0x99999999;
+	return !(!(x & odd_mask));
+}
+
 

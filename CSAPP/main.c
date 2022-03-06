@@ -18,10 +18,10 @@ unsigned replace_byte(unsigned x, int i, unsigned char b) {
 	return x;
 }
 int main(){
-	unsigned x = 0;
-	unsigned y = (unsigned)-1;
+	unsigned x = 2;
+	unsigned y = 3;
 
-	printf("%d\n", any_add_one(x));
-	printf("%d\n", any_add_one(y));
+	printf("%d\n", odd_ones(x));
+	printf("%d\n", odd_ones(y));
 	return 0;
 }
