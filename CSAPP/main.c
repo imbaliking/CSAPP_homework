@@ -18,8 +18,14 @@ unsigned replace_byte(unsigned x, int i, unsigned char b) {
 	return x;
 }
 int main(){
-	int test_D_1 = 0xF;
-	int test_D_0 = ~0;
-	printf("%d", int_shifts_are_arithmetic());
+	int x = -1;
+	unsigned y = (unsigned)x;
+	show_int(x);
+	show_int(sra(x, 2));
+	show_unsigned(y);
+	show_unsigned(srl(y, 2));
+
+	printf("%d\t%d\n", sra(x,2),x>>2);
+	printf("%u\t%u\n", srl(y,2),y>>2);
 	return 0;
 }
