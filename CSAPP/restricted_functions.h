@@ -30,3 +30,6 @@ int leftmost_one(unsigned x);
 //2.67
 int int_size_is_32_B();
 int int_size_is_32_C();
+
+//2.68
+int lower_one_mask(int n);

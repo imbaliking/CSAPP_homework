@@ -72,3 +72,9 @@ int int_size_is_32_C() {
 	int beyond_msb = set_msb << 15;
 	return !!(set_msb<<1) & (!(beyond_msb<<2));
 }
+
+int lower_one_mask(int n) {
+	int ret = 1 << n;
+	// 最后减掉的是当n=32位时编译器会自动循环移位把1移到开头，只能再减去1
+	return ret - 1 - !!(ret &1);
+}

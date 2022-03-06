@@ -18,10 +18,9 @@ unsigned replace_byte(unsigned x, int i, unsigned char b) {
 	return x;
 }
 int main(){
-	unsigned x = 2;
-	unsigned y = 89;
 
-	printf("%d\n", int_size_is_32_B());
-	printf("%d\n", int_size_is_32_C());
+	show_int(lower_one_mask(1));
+	show_int(lower_one_mask(4));
+	show_int(lower_one_mask(32));
 	return 0;
 }
