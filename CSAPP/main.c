@@ -21,7 +21,7 @@ int main(){
 	unsigned x = 2;
 	unsigned y = 89;
 
-	show_int(leftmost_one(x));
-	show_int(leftmost_one(y));
+	printf("%d\n", int_size_is_32_B());
+	printf("%d\n", int_size_is_32_C());
 	return 0;
 }

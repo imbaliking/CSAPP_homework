@@ -1,5 +1,7 @@
 #include "restricted_functions.h"
+#include "show_bytes.h"
 #include <limits.h>
+#include <stdio.h>
 
 int return_1_A(int x) {
 	// ! mean convert bits to logic,when all bits is 0,! return 1;when any bits contain 1,! return 0;
@@ -59,3 +61,14 @@ int leftmost_one(unsigned x) {
 }
 
 
+int int_size_is_32_B() {
+	int set_msb = 1 << 31;
+	int ret = set_msb - 1;
+	return !(ret>>31);
+}
+
+int int_size_is_32_C() {
+	int set_msb = 0xFFFF << 15;
+	int beyond_msb = set_msb << 15;
+	return !!(set_msb<<1) & (!(beyond_msb<<2));
+}

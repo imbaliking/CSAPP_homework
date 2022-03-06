@@ -26,3 +26,7 @@ int odd_ones(unsigned x);
 //2.66
 //Generate mask indicating leftmost 1 in x. Assume w=32.
 int leftmost_one(unsigned x);
+
+//2.67
+int int_size_is_32_B();
+int int_size_is_32_C();
