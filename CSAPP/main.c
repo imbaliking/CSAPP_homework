@@ -19,9 +19,9 @@ unsigned replace_byte(unsigned x, int i, unsigned char b) {
 }
 int main(){
 	unsigned x = 2;
-	unsigned y = 3;
+	unsigned y = 89;
 
-	printf("%d\n", odd_ones(x));
-	printf("%d\n", odd_ones(y));
+	show_int(leftmost_one(x));
+	show_int(leftmost_one(y));
 	return 0;
 }

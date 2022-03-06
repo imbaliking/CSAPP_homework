@@ -1,5 +1,7 @@
 #pragma once
 
+#define U_MAX 0xFFFFFFFF
+
 //2.61
 int return_1_A(int x);
 int return_1_B(int x);
@@ -20,3 +22,7 @@ int any_add_one(unsigned x);
 //2.65
 // Return 1 when x contains an odd number of 1s;0 otherwise.Assume w=32.
 int odd_ones(unsigned x);
+
+//2.66
+//Generate mask indicating leftmost 1 in x. Assume w=32.
+int leftmost_one(unsigned x);

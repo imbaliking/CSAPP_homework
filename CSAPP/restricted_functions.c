@@ -1,4 +1,5 @@
 #include "restricted_functions.h"
+#include <limits.h>
 
 int return_1_A(int x) {
 	// ! mean convert bits to logic,when all bits is 0,! return 1;when any bits contain 1,! return 0;
@@ -43,6 +44,18 @@ int any_add_one(unsigned x) {
 int odd_ones(unsigned x) {
 	unsigned odd_mask = 0x99999999;
 	return !(!(x & odd_mask));
+}
+
+int leftmost_one(unsigned x) {
+	// generate 0..01...1
+	// 原理是把最高位的1不断往后移位，同时将移位后的结果和原本的结果进行或运算，可以保证最高位后面的位全都变成1
+	// 只执行到16是因为unsigned 为 32位
+	x |= x >> 1;
+	x |= x >> 2;
+	x |= x >> 4;
+	x |= x >> 8;
+	x |= x >> 16;
+	return x & ((~x >> 1) | INT_MIN);
 }
 
 
